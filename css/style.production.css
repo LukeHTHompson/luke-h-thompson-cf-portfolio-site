@@ -16,18 +16,20 @@ UVA Blue: #232D4B
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Crimson Pro', sans-serif;
   font-weight: 200;
+
   /* Set font size to 16 px */
   font-size: 20px;
+
   /* Set height of lines to 1.6 */
   line-height: 1.6;
-  background-color: #F84C1E;
-  color: #ffffff;
+  background-color: #f84c1e;
+  color: #fff;
 }
 
 .page-header {
@@ -47,21 +49,22 @@ body {
   display: flex;
   width: 100%;
   padding: 20px;
+
   /* Aesthetic-only additions */
-  background-color: #232D4B;
+  background-color: #232d4b;
   border-bottom: 4px solid black;
 }
 
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -70,8 +73,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .navigation_list {
@@ -92,6 +95,7 @@ main {
 main.profile {
   max-width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 main.about {
@@ -101,12 +105,12 @@ main.about {
 .skills-table {
   display: inline-block;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .berlin-illustration {
-  display:block;
+  display: block;
   margin: 0 auto;
   background-color: white;
   border: 2px solid black;
@@ -116,9 +120,11 @@ main.about {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -128,9 +134,11 @@ main.about {
   0% {
     fill: #edc655;
   }
+
   50% {
     fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
@@ -138,61 +146,65 @@ main.about {
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 img.profile__portrait {
@@ -211,8 +223,8 @@ footer.page-footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -232,15 +244,16 @@ active
 */
 a {
   font-weight: 700;
-  color: #232D4B;
+  color: #232d4b;
 }
 
 a:visited {
   /* Applies to links that have been previously visited */
-  color: #232D4B;
+  color: #232d4b;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /*
   Prevents underlining when hovering on a link.
   Focus applies to when a link is selected via the keyboard instead of mouse.
@@ -255,7 +268,7 @@ a:active {
 
 a.navigation-list__item--active {
   text-decoration: none;
-  color: #F84C1E;
+  color: #f84c1e;
 }
 
 /*
@@ -266,7 +279,7 @@ statments are more specific and this is after my link formatting.
 Answer: The 'a:visisted' section above was being considered as more specific.
 */
 a.navigation-list__item {
-    color: #F84C1E;
+  color: #f84c1e;
 }
 
 a.navigation-list__item:active {
@@ -274,7 +287,7 @@ a.navigation-list__item:active {
   color: #489c79;
 }
 
-.paragraph__link{
+.paragraph__link {
   font-weight: 700;
 }
 
@@ -285,9 +298,11 @@ td {
   border: 1px solid white;
   border-collapse: collapse;
 }
+
 th {
   text-align: center;
 }
+
 th,
 td {
   min-width: 175px;
@@ -299,8 +314,10 @@ button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /*
   styles the background color, font color, and text decoration (underline, etc.)
   of the button
@@ -308,26 +325,32 @@ button {
   background-color: #357b70;
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /*
   gives the button a bottom border with a width of 2px, a type of solid,
   and a color in RGBA format
   */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
   /* Transitions should alwaus be applied to the base state of an element.
   Variants will look to the base state and find the transition */
   -webkit-transition: 0.9s opacity;
   -o-transition: 0.9s opacity;
   transition: 0.9s opacity;
 }
+
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /*
   styles the background color, font color, and text decoration (underline, etc.)
   of the button
@@ -335,14 +358,17 @@ button {
   background-color: #357b70;
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /*
   gives the button a bottom border with a width of 2px, a type of solid,
   and a color in RGBA format
   */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
   /* Transitions should alwaus be applied to the base state of an element.
   Variants will look to the base state and find the transition */
   -webkit-transition: 0.9s opacity;
@@ -356,6 +382,7 @@ button:focus,
 .button:focus {
   /* Change mouse to a hand on hover */
   cursor: pointer;
+
   /* reduce opacity of button to 80% on hover */
   opacity: 0.8;
 }
@@ -367,11 +394,12 @@ button.button__secondary {
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
- background-color: #232D4B;
- border: 2px solid black;
+  display: inline-block;
+  width: 33%;
+  background-color: #232d4b;
+  border: 2px solid black;
 }
+
 /* end grid fallback */
 
 @supports (display:grid) {
@@ -380,6 +408,7 @@ button.button__secondary {
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+
     /*
     The following line is not necessary as the number of rows will grow
     automatically as content is added.
@@ -395,15 +424,16 @@ button.button__secondary {
     min-height: auto;
     margin: 20px;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     border: 2px solid black;
     padding: 10px;
   }
 
-  a.grid__item-link{
-    color: #F84C1E;
+  a.grid__item-link {
+    color: #f84c1e;
   }
 }
+
 /*
 Make links to social media light up on hover
 
@@ -415,8 +445,8 @@ background: url("https://abs.twimg.com/favicons/twitter.ico");
 */
 
 img.twitter-logo:hover,
-img.twitter-logo:focus{
-  /*position: relative;*/
+img.twitter-logo:focus {
+  /* position: relative; */
   opacity: 0.8;
 }
 
@@ -428,12 +458,12 @@ span.social-media-color {
 }
  */
 img.facebook-logo:hover,
-img.facebook-logo:focus{
+img.facebook-logo:focus {
   opacity: 0.8;
 }
 
 img.instagram-logo:hover,
-img.instagram-logo:focus{
+img.instagram-logo:focus {
   opacity: 0.8;
 }
 
@@ -448,20 +478,24 @@ Grid space between objects also lowered.
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }

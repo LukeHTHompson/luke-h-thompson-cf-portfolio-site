@@ -8,9 +8,9 @@ UVA Blue: #232D4B
 */
 
 :root {
-  --primary-color: #F84C1E;
-  --secondary-color: #232D4B;
-  --white: #ffffff;
+  --primary-color: #f84c1e;
+  --secondary-color: #232d4b;
+  --white: #fff;
   --font-normal: 200;
   --font-bold: 700;
   --main-width: 600px;
@@ -30,8 +30,10 @@ UVA Blue: #232D4B
 body {
   font-family: 'Crimson Pro', sans-serif;
   font-weight: var(--font-normal);
+
   /* Set font size to 16 px */
   font-size: 20px;
+
   /* Set height of lines to 1.6 */
   line-height: 1.6;
   background-color: var(--primary-color);
@@ -53,6 +55,7 @@ body {
   display: flex;
   width: 100%;
   padding: 20px;
+
   /* Aesthetic-only additions */
   background-color: var(--secondary-color);
   border-bottom: 4px solid black;
@@ -90,6 +93,7 @@ main {
 main.profile {
   max-width: var(--main-width);
   margin: 0 auto;
+  text-align: center;
 }
 
 main.about {
@@ -102,7 +106,7 @@ main.about {
 }
 
 .berlin-illustration {
-  display:block;
+  display: block;
   margin: 0 auto;
   background-color: white;
   border: 2px solid black;
@@ -112,9 +116,11 @@ main.about {
   0% {
     fill: var(--sun-color-one);
   }
+
   50% {
     fill: var(--sun-color-two);
   }
+
   100% {
     fill: var(--sun-color-three);
   }
@@ -128,6 +134,7 @@ main.about {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -141,6 +148,7 @@ main.about {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -190,7 +198,8 @@ a:visited {
   color: var(--secondary-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /*
   Prevents underlining when hovering on a link.
   Focus applies to when a link is selected via the keyboard instead of mouse.
@@ -216,7 +225,7 @@ statments are more specific and this is after my link formatting.
 Answer: The 'a:visisted' section above was being considered as more specific.
 */
 a.navigation-list__item {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 a.navigation-list__item:active {
@@ -224,7 +233,7 @@ a.navigation-list__item:active {
   color: var(--link-active);
 }
 
-.paragraph__link{
+.paragraph__link {
   font-weight: var(--font-bold);
 }
 
@@ -235,9 +244,11 @@ td {
   border: 1px solid white;
   border-collapse: collapse;
 }
+
 th {
   text-align: center;
 }
+
 th,
 td {
   min-width: 175px;
@@ -250,8 +261,10 @@ button,
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /*
   styles the background color, font color, and text decoration (underline, etc.)
   of the button
@@ -259,14 +272,17 @@ button,
   background-color: var(--button-primary-background-color);
   color: white;
   text-decoration: none;
+
   /* adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
   border-radius: 3px;
+
   /*
   gives the button a bottom border with a width of 2px, a type of solid,
   and a color in RGBA format
   */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+
   /* Transitions should alwaus be applied to the base state of an element.
   Variants will look to the base state and find the transition */
   transition: 0.9s opacity;
@@ -278,6 +294,7 @@ button:focus,
 .button:focus {
   /* Change mouse to a hand on hover */
   cursor: pointer;
+
   /* reduce opacity of button to 80% on hover */
   opacity: 0.8;
 }
@@ -289,17 +306,19 @@ button.button__secondary {
 
 /* start grid fallback */
 .grid__item {
- display: inline-block;
- width: 33%;
- background-color: #232D4B;
- border: 2px solid black;
+  display: inline-block;
+  width: 33%;
+  background-color: #232d4b;
+  border: 2px solid black;
 }
+
 /* end grid fallback */
 
 @supports (display:grid) {
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     /*
     The following line is not necessary as the number of rows will grow
     automatically as content is added.
@@ -320,10 +339,11 @@ button.button__secondary {
     padding: 10px;
   }
 
-  a.grid__item-link{
+  a.grid__item-link {
     color: var(--primary-color);
   }
 }
+
 /*
 Make links to social media light up on hover
 
@@ -335,8 +355,8 @@ background: url("https://abs.twimg.com/favicons/twitter.ico");
 */
 
 img.twitter-logo:hover,
-img.twitter-logo:focus{
-  /*position: relative;*/
+img.twitter-logo:focus {
+  /* position: relative; */
   opacity: 0.8;
 }
 
@@ -348,12 +368,12 @@ span.social-media-color {
 }
  */
 img.facebook-logo:hover,
-img.facebook-logo:focus{
+img.facebook-logo:focus {
   opacity: 0.8;
 }
 
 img.instagram-logo:hover,
-img.instagram-logo:focus{
+img.instagram-logo:focus {
   opacity: 0.8;
 }
 
@@ -367,19 +387,23 @@ Grid space between objects also lowered.
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
