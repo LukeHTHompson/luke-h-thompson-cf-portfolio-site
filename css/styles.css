@@ -328,6 +328,9 @@ Make links to social media light up on hover
 
 Hoping to eventually make it so that the black and white SVGs I have now are
 replaced with full color versions upon hover.
+
+Cool way to try making the link fancier!
+background: url("https://abs.twimg.com/favicons/twitter.ico");
 */
 
 img.twitter-logo:hover, img.twitter-logo:focus{
