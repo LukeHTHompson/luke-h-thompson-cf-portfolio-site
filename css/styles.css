@@ -312,7 +312,7 @@ button.button__secondary {
   .grid__item {
     width: auto;
     min-height: auto;
-    margin: 0;
+    margin: 20px;
     text-align: center;
     color: var(--white);
     border: 2px solid black;
