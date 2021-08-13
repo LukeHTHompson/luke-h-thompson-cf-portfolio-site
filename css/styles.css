@@ -310,7 +310,6 @@ button.button__secondary {
   }
 
   .grid__item {
-    background-color: var(--secondary-color);
     width: auto;
     min-height: auto;
     margin: 0;
