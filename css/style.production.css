@@ -370,6 +370,7 @@ button.button__secondary {
  display: inline-block;
  width: 33%;
  background-color: #232D4B;
+ border: 2px solid black;
 }
 /* end grid fallback */
 
