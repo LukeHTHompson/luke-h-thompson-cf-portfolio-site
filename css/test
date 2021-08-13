@@ -1,0 +1,224 @@
+/*
+Example comment.
+Dark Grey: #2b2b2b
+Purple: #357b70
+Orange: #e0b354
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Pro', sans-serif;
+  font-weight: 200;
+  /* Set font size to 16 px */
+  font-size: 20px;
+  /* Set height of lines to 1.6 */
+  line-height: 1.6;
+  background-color: #F84C1E;
+}
+
+.page-header {
+  /*
+  NOTE This code would make it stick with the user as they scroll.
+  I like that idea, but it's not what the task wants right now.
+  I also wouldn't know how to make the menubar look right this way.
+
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  */
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  /* Aesthetic-only additions */
+  background-color: #232D4B;
+  border-bottom: 4px solid black;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#header__logo {
+  display: flex;
+  align-self: flex-start;
+  /* Border to help with visualizing for format */
+  border: 1px solid black;
+}
+
+/*
+Unsure why the navigator section is not fitting flush with the top of the
+webpage. Also would like it to list horizontally w/o bullets in top-right.
+*/
+
+/*
+nav {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  right: 0 px;
+Border to help with visualizing for format
+  border: 1px solid black;
+  font-variant: small-caps;
+}
+*/
+
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 160px;
+  /* Border to help with visualizing for format*/
+  border: 1px solid black;
+}
+
+main.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+
+img.profile__portrait {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+footer.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* Border to help with visualizing for format*/
+  /*
+  Footer takes up all space left and right, so margin: auto
+   for the left and right margins does nothing.
+  */
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+
+/*
+Link handlings below
+NOTE that to function the order MUST be:
+visited
+hover
+active
+*/
+a {
+  font-weight: 700;
+  color: #232D4B;
+}
+
+a:visited {
+  /* Applies to links that have been previously visited */
+  color: #232D4B;
+}
+
+a:hover, a:focus {
+  /*
+  Prevents underlining when hovering on a link.
+  Focus applies to when a link is selected via the keyboard instead of mouse.
+  */
+  text-decoration: none;
+}
+
+a:active {
+  /* Applies to links being currently activated */
+  color: #489c79;
+}
+
+a.navigation-list__item--active {
+  text-decoration: none;
+  color: #F84C1E;
+}
+
+/*
+For some reason an a is required before this class in order to make this
+function on the site. I don't understand why the a is necessary if class
+statments are more specific and this is after my link formatting.
+
+Answer: The 'a:visisted' section above was being considered as more specific.
+*/
+a.navigation-list__item {
+    color: #F84C1E;
+}
+
+a.navigation-list__item:active {
+  /* Applies to links being currently activated */
+  color: #489c79;
+}
+
+.paragraph__link{
+  font-weight: 200;
+}
+
+/* Button handlings below */
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /*
+  styles the background color, font color, and text decoration (underline, etc.)
+  of the button
+  */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /* adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /*
+  gives the button a bottom border with a width of 2px, a type of solid,
+  and a color in RGBA format
+  */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover, button:focus {
+  /* Change mouse to a hand on hover */
+  cursor: pointer;
+  /* reduce opacity of button to 80% on hover */
+  opacity: 0.8;
+}
+
+button.button__secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+/*
+Make links to social media light up on hover
+
+Hoping to eventually make it so that the black and white SVGs I have now are
+replaced with full color versions upon hover.
+*/
+img.twitter-logo:hover, img.twitter-logo:focus{
+  opacity: 0.8;
+}
+
+img.facebook-logo:hover, img.facebook-logo:focus{
+  opacity: 0.8;
+}
+
+img.instagram-logo:hover, img.instagram-logo:focus{
+  opacity: 0.8;
+}
