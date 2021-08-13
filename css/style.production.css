@@ -396,6 +396,7 @@ button.button__secondary {
     text-align: center;
     color: #ffffff;
     border: 2px solid black;
+    padding: 10px;
   }
 
   a.grid__item-link{
@@ -408,20 +409,9 @@ Make links to social media light up on hover
 Hoping to eventually make it so that the black and white SVGs I have now are
 replaced with full color versions upon hover.
 */
-.twitter-logo,
-.facebook-logo,
-.instagram-logo {
-  -webkit-transition: 0.2 opacity;
-  -o-transition: 0.2 opacity;
-  transition: 0.2 opacity;
-}
 
 img.twitter-logo:hover, img.twitter-logo:focus{
   opacity: 0.8;
-  /*
-  Cool way to try making the link fancier!
-  background: url("https://abs.twimg.com/favicons/twitter.ico");
-  */
 }
 
 img.facebook-logo:hover, img.facebook-logo:focus{
@@ -431,7 +421,6 @@ img.facebook-logo:hover, img.facebook-logo:focus{
 img.instagram-logo:hover, img.instagram-logo:focus{
   opacity: 0.8;
 }
-
 
 /*
 Reformatting code for devices with widths less than 750px or less than 500px.

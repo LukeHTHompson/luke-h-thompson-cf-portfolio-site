@@ -316,6 +316,7 @@ button.button__secondary {
     text-align: center;
     color: var(--white);
     border: 2px solid black;
+    padding: 10px;
   }
 
   a.grid__item-link{
