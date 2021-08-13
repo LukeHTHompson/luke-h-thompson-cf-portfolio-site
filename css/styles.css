@@ -334,9 +334,17 @@ background: url("https://abs.twimg.com/favicons/twitter.ico");
 */
 
 img.twitter-logo:hover, img.twitter-logo:focus{
+  /*position: relative;*/
   opacity: 0.8;
 }
 
+/*
+span.social-media-color {
+  display: inline;
+  position: relative;
+  top: -39px;
+}
+ */
 img.facebook-logo:hover, img.facebook-logo:focus{
   opacity: 0.8;
 }
