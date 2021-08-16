@@ -16,7 +16,7 @@ UVA Blue: #232D4B
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -49,22 +49,23 @@ body {
   display: flex;
   width: 100%;
   padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   /* Aesthetic-only additions */
   background-color: #232d4b;
   border-bottom: 4px solid black;
 }
 
+/*
 .page-header__item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
 }
+*/
 
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   text-align: right;
 }
 
@@ -73,8 +74,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 150px;
+  width: 33%;
+  height: auto;
 }
 
 .navigation_list {
@@ -98,22 +102,44 @@ main.profile {
   text-align: center;
 }
 
-main.about {
+main {
   text-align: center;
+  padding: 6px;
+}
+
+form {
+  text-align: left;
+  padding: 6px;
 }
 
 .skills-table {
   display: inline-block;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.berlin-illustration {
-  display: block;
-  margin: 0 auto;
+/* Attempting to get Responsive SVG with Animations,
+may need to go for static SVG to be responsive */
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 505px;
+  padding-bottom: 72.15%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: white;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 @-webkit-keyframes color-change {
@@ -146,65 +172,65 @@ main.about {
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
-  animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
 .cloud-front {
   -webkit-animation: 30s cloud-move infinite alternate linear;
-  animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
 
   to {
     -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 
 .cloud-back {
   -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-  animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 img.profile__portrait {
@@ -223,8 +249,8 @@ footer.page-footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -305,7 +331,6 @@ th {
 
 th,
 td {
-  min-width: 175px;
   padding: 5px;
 }
 
@@ -342,7 +367,6 @@ button {
   -o-transition: 0.9s opacity;
   transition: 0.9s opacity;
 }
-
 .button {
   /* overwrites browser defaults and resets the border */
   border: none;
@@ -376,21 +400,48 @@ button {
   transition: 0.9s opacity;
 }
 
+.form-required {
+  font-weight: 700;
+  text-align: left;
+}
+
+#contact-email,
+#contact-tel,
+#contact-message {
+  display: inline-block;
+}
+
+#submit {
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.9s opacity;
+  -o-transition: 0.9s opacity;
+  transition: 0.9s opacity;
+}
+
+#submit:hover,
+#submit:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* Change mouse to a hand on hover */
+  Change mouse to a hand on hover
   cursor: pointer;
 
-  /* reduce opacity of button to 80% on hover */
+  reduce opacity of button to 80% on hover
   opacity: 0.8;
 }
 
 button.button__secondary {
-  background-color: #e0b354;
-  color: undefined;
-}
+  background-color: var(--button-secondary-background-color);
+  color: var(--button-secondary-background-text-color);
+} */
 
 /* start grid fallback */
 .grid__item {
@@ -477,12 +528,54 @@ Grid space between objects also lowered.
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    -webkit-box-pack: safe right;
+        -ms-flex-pack: safe right;
+            justify-content: safe right;
+  }
+
+  img.profile__portrait {
+    float: none;
+    margin: 5px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    -webkit-box-pack: safe right;
+        -ms-flex-pack: safe right;
+            justify-content: safe right;
+  }
+
+  img.profile__portrait {
+    float: none;
+    margin: 5px;
   }
 }
 
@@ -498,5 +591,9 @@ Grid space between objects also lowered.
 
   h1 {
     font-size: 22px;
+  }
+
+  body {
+    font-size: 16px;
   }
 }
