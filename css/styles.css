@@ -77,6 +77,7 @@ body {
   display: flex;
   align-self: center;
   max-width: 150px;
+  width: 33%;
   height: auto;
 }
 
@@ -443,10 +444,6 @@ Smaller header font, grid turned single column (750px at two columns).
 Grid space between objects also lowered.
 */
 @media all and (max-width: 500px) {
-  #header__logo {
-    max-width: 33%;
-  }
-
   .grid {
     grid-template-columns: 1fr;
   }
@@ -465,10 +462,6 @@ Grid space between objects also lowered.
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
-  #header__logo {
-    max-width: 33%;
-  }
-
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -487,10 +480,6 @@ Grid space between objects also lowered.
 }
 
 @media all and (max-width: 750px) {
-  #header__logo {
-    max-width: 33%;
-  }
-
   .grid {
     grid-gap: 10px;
   }
