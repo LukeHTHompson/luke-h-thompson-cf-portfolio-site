@@ -121,6 +121,16 @@ form {
 
 /* Attempting to get Responsive SVG with Animations,
 may need to go for static SVG to be responsive */
+
+.svg-container {
+  display: block;
+  max-width: 700px;
+  margin: auto;
+  background-color: white;
+  border: 2px solid black;
+}
+
+/*
 .svg-container {
   display: inline-block;
   position: relative;
@@ -141,7 +151,7 @@ may need to go for static SVG to be responsive */
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
-
+*/
 @-webkit-keyframes color-change {
   0% {
     fill: #edc655;
@@ -155,7 +165,6 @@ may need to go for static SVG to be responsive */
     fill: #f76414;
   }
 }
-
 @keyframes color-change {
   0% {
     fill: #edc655;
