@@ -55,24 +55,30 @@ body {
   display: flex;
   width: 100%;
   padding: 20px;
+  justify-content: space-between;
 
   /* Aesthetic-only additions */
   background-color: var(--secondary-color);
   border-bottom: 4px solid black;
 }
 
+/*
 .page-header__item {
   flex: 0 1 200px;
 }
+*/
 
 .page-header__item:last-child {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   text-align: right;
 }
 
 #header__logo {
   display: flex;
   align-self: center;
+  max-width: 150px;
+  width: 33%;
+  height: auto;
 }
 
 .navigation_list {
@@ -105,11 +111,25 @@ main.about {
   justify-content: center;
 }
 
-.berlin-illustration {
-  display: block;
-  margin: 0 auto;
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 505px;
+  padding-bottom: 72.15%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: white;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 @keyframes color-change {
@@ -251,7 +271,6 @@ th {
 
 th,
 td {
-  min-width: 175px;
   padding: 5px;
 }
 
@@ -288,21 +307,37 @@ button,
   transition: 0.9s opacity;
 }
 
+span.form-required {
+  font-weight: var(--font-bold);
+}
+
+#contact-email,
+#contact-tel,
+#contact-message {
+  display: inline-block;
+}
+
+#submit {
+  display: inline-block;
+  text-align: center;
+}
+
+/*
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* Change mouse to a hand on hover */
+  Change mouse to a hand on hover
   cursor: pointer;
 
-  /* reduce opacity of button to 80% on hover */
+  reduce opacity of button to 80% on hover
   opacity: 0.8;
 }
 
 button.button__secondary {
   background-color: var(--button-secondary-background-color);
   color: var(--button-secondary-background-text-color);
-}
+} */
 
 /* start grid fallback */
 .grid__item {
@@ -386,11 +421,35 @@ Grid space between objects also lowered.
   .grid {
     grid-template-columns: 1fr;
   }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 200px;
+    justify-content: safe right;
+  }
+
+  img.profile__portrait {
+    float: none;
+    margin: 5px;
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 200px;
+    justify-content: safe right;
+  }
+
+  img.profile__portrait {
+    float: none;
+    margin: 5px;
   }
 }
 
@@ -406,5 +465,9 @@ Grid space between objects also lowered.
 
   h1 {
     font-size: 22px;
+  }
+
+  body {
+    font-size: 16px;
   }
 }

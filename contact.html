@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;700&display=swap" rel="stylesheet">
-  <!-- Comment out next line to avoid using style.production.css -->
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
-  <!-- Remove Comment to use styles.css (non-prd)
+  <!-- Comment out next line to avoid using style.production.css
+  <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+  <!-- Remove Comment to use styles.css (non-prd) -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -40,18 +40,26 @@
   <main>
     <h1>Contact</h1>
     <p>Leave your contact info and a quick message so we can get in touch!</p>
-    <br>*Required
-    <form action="" method="post" id="contact-form">
+    <br><span class="form-required">*Required Element</span>
+    <form action="https://formspree.io/f/mpzkodrz" method="post" id="contact-form">
+      <label class="standard-label" for="contact-email">*Name: </label>
+      <input type="text" id="contact-name" name="name" placeholder="Jane Doe" required>
+      <br>
+
       <label class="standard-label" for="contact-email">*E-mail: </label>
-      <input type="email" id="contact-email" placeholder="example@service.com" required>
+      <input type="email" id="contact-email" name="e-mail" placeholder="example@service.com" required>
+      <br>
 
       <label class="standard-label" for="contact-tel">Telephone: </label>
-      <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx">
+      <input type="tel" id="contact-tel"  name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="xxx-xxx-xxxx">
+      <br>
 
       <label class="standard-label" for="contact-message">*Message (240 character max): </label>
-      <textarea maxlength="240" id="contact-message" required></textarea>
+      <br>
+      <textarea maxlength="240" id="contact-message" name="message" required></textarea>
+      <br>
 
-      <input type="submit" value="Send message">
+      <input type="submit" id="submit" value="Send Message">
     </form>
     <div>
       <br>Luke Thompson<br>
