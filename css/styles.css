@@ -112,6 +112,11 @@ form {
   padding: 6px;
 }
 
+form > label,
+form > input {
+  margin: 2px;
+}
+
 .skills-table {
   display: inline-block;
   justify-content: center;
