@@ -15,10 +15,11 @@ UVA Blue: #232D4B/#6C799C
 */
 
 :root {
-  --primary-color: #FBB584;
+  --primary-color: #F69350;
   /*#f84c1e;*/
-  --secondary-color: #6C799C;
+  --secondary-color: #394E79;
   /*#232d4b;*/
+  --link-hover: #232d4b;
   --white: #fff;
   --font-normal: 200;
   --font-bold: 700;
@@ -47,7 +48,7 @@ body {
   /* Set height of lines to 1.6 */
   line-height: 1.6;
   background-color: var(--primary-color);
-  color: #fff;
+  /* color: #fff; */
 }
 
 .page-header {
@@ -72,7 +73,8 @@ body {
   justify-content: space-between;
 
   /* Aesthetic-only additions */
-  background-color: var(--secondary-color);
+  background-color: white;
+  /* var(--secondary-color); */
   border-bottom: 4px solid black;
 }
 
@@ -94,7 +96,7 @@ body {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  max-width: 150px;
+  max-width: 50px;
   width: 33%;
   height: auto;
 }
@@ -149,6 +151,7 @@ may need to go for static SVG to be responsive */
   display: block;
   max-width: 700px;
   margin: auto;
+  margin-top: 25px;
   background-color: white;
   border: 2px solid black;
 }
@@ -302,8 +305,14 @@ hover
 active
 */
 a {
-  font-weight: 700;
+  font-weight: var(--font-bold);
   color: var(--secondary-color);
+  /* 
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear; */
 }
 
 a:visited {
@@ -318,6 +327,7 @@ a:focus {
   Focus applies to when a link is selected via the keyboard instead of mouse.
   */
   text-decoration: none;
+  color: var(--link-hover);
 }
 
 a:active {
@@ -325,10 +335,7 @@ a:active {
   color: #489c79;
 }
 
-a.navigation-list__item--active {
-  text-decoration: none;
-  color: var(--primary-color);
-}
+
 
 /*
 For some reason an a is required before this class in order to make this
@@ -338,12 +345,17 @@ statments are more specific and this is after my link formatting.
 Answer: The 'a:visisted' section above was being considered as more specific.
 */
 a.navigation-list__item {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 a.navigation-list__item:active {
   /* Applies to links being currently activated */
-  color: #489c79;
+  color: var(--link-active);
+}
+
+a.navigation-list__item--active {
+  text-decoration: none;
+  /* color: var(--primary-color); */
 }
 
 .paragraph__link {
@@ -354,7 +366,7 @@ a.navigation-list__item:active {
 table,
 th,
 td {
-  border: 1px solid white;
+  border: 1px solid black;
   border-collapse: collapse;
 }
 
