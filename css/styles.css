@@ -8,8 +8,10 @@ UVA Blue: #232D4B
 */
 
 :root {
-  --primary-color: #f84c1e;
-  --secondary-color: #232d4b;
+  --primary-color: #FBB584;
+  /*#f84c1e;*/
+  --secondary-color: #6C799C;
+  /*#232d4b;*/
   --white: #fff;
   --font-normal: 200;
   --font-bold: 700;
@@ -28,7 +30,7 @@ UVA Blue: #232D4B
 }
 
 body {
-  font-family: 'Crimson Pro', sans-serif;
+  font-family: 'Franklin Gothic', 'Crimson Pro', sans-serif;
   font-weight: var(--font-normal);
 
   /* Set font size to 16 px */
@@ -112,8 +114,8 @@ form {
   padding: 6px;
 }
 
-form > label,
-form > input {
+form>label,
+form>input {
   margin: 2px;
 }
 
