@@ -541,6 +541,18 @@ Cool way to try making the link fancier!
 background: url("https://abs.twimg.com/favicons/twitter.ico");
 */
 
+img.linkedin-logo:hover,
+img.linkedin-logo:focus {
+  /* position: relative; */
+  opacity: 0.8;
+}
+
+img.medium-logo:hover,
+img.medium-logo:focus {
+  /* position: relative; */
+  opacity: 0.8;
+}
+
 img.twitter-logo:hover,
 img.twitter-logo:focus {
   /* position: relative; */
